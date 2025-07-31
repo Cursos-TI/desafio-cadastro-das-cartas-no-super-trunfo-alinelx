@@ -68,8 +68,15 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("\nCARTAS CADASTRADAS\n");
-    printf("\nCARTA 1\n\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %d\n\n============\n\n", estado1, codigo1, cidade1, populacao1, areakm1, pib1, pontoturistico1);
-    printf("CARTA 2\n\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %d\n\n============\n\n", estado2, codigo2, cidade2, populacao2, areakm2, pib2, pontoturistico2);
+
+    // Cálculo de densidade e PIB per capita
+    float densidade1 = populacao1/areakm1;
+    float densidade2 = populacao2/areakm2;
+    float pibpercapita1 = (pib1*1000000000)/populacao1;
+    float pibpercapita2 = (pib2*1000000000)/populacao2;
+
+    printf("\nCARTAS CADASTRADAS\n\n");
+    printf("CARTA 1\n\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB per Capita: %.2f reais\n\n============\n\n", estado1, codigo1, cidade1, populacao1, areakm1, pib1, pontoturistico1, densidade1, pibpercapita1);
+    printf("CARTA 2\n\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB per Capita: %.2f reais\n\n============\n\n", estado2, codigo2, cidade2, populacao2, areakm2, pib2, pontoturistico2, densidade2, pibpercapita2);
     return 0;
 }
